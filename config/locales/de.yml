@@ -1,0 +1,12 @@
+de:
+  activerecord:
+    attributes:
+      spree/order:
+        terms_and_conditions: 'Allgemeinen Geschäftsbedingungen und Datenschutzerklärung'
+  spree:
+    terms_and_conditions:
+      title: 'Allgemeinen Geschäftsbedingungen und Datenschutzerklärung'
+      checkbox: 'Ich habe die Allgemeinen Geschäftsbedingungen und Datenschutzerklärung gelesen und erkenne diese an.'
+      must_be_accepted: 'müssen akzeptiert werden!'
+    order_state:
+      terms_and_conditions: 'AGB'
