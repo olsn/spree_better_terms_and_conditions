@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_better_terms_and_conditions'
   s.version     = '2.2.1'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Adds a Terms and Conditions Step (including checkbox) to your Order Checkout Flow.'
+  s.description = 'Adds a Terms and Conditions Step (including checkbox) to your Order Checkout Flow.'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'Aleks Maksimow'

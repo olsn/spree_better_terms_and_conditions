@@ -20,7 +20,7 @@ Installation
 Add spree_better_terms_and_conditions to your Gemfile:
 
 ```ruby
-gem 'spree_better_terms_and_conditions'
+gem 'spree_better_terms_and_conditions', git: 'https://github.com/aleks/spree_better_terms_and_conditions.git', branch: 'master'
 ```
 
 Bundle your dependencies and run the installation generator:
