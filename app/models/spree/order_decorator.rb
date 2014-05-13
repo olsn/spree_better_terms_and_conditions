@@ -12,10 +12,21 @@ Spree::Order.class_eval do
       self.errors[:terms_and_conditions].empty? ? true : false
     end
   end
+
+  def payment_selected?
+    unless payments.valid.size >= 1
+      # errors.add(:base, 'Terms and Conditions must be accepted!')
+      self.errors[:payments] << 'You have to select a payment.'
+      self.errors[:payments].empty? ? true : false
+    end
+  end
 end
 
 # Validate on state change
 Spree::Order.state_machine.before_transition :to => :confirm, :do => :valid_terms_and_conditions?
+
+# Validate on state change
+Spree::Order.state_machine.before_transition :to => :terms_and_conditions, :do => :payment_selected?
 
 # Add terms_and_conditions to strong parameters
 Spree::PermittedAttributes.checkout_attributes << :terms_and_conditions # Remove if Spree is below version 2.1
