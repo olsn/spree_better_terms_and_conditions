@@ -3,6 +3,9 @@ de:
     attributes:
       spree/order:
         terms_and_conditions: 'Allgemeinen Geschäftsbedingungen und Datenschutzerklärung'
+  order_mailer:
+      confirm_email:
+        status_link: 'Um den Status Ihrer Bestellung einzusehen oder um Zahlungsinformationen zu erhalten klicken sie bitte auf folgenden Link: http://ndgmr.com/vana_dev/#/checkout/complete?cart='
   spree:
     terms_and_conditions:
       title: 'Allgemeinen Geschäftsbedingungen und Datenschutzerklärung'
