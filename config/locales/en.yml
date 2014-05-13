@@ -5,7 +5,7 @@ en:
         terms_and_conditions: 'Terms and Conditions'
   order_mailer:
     confirm_email:
-      status_link: ! 'To view the status of your order or to get the payment-information, please click the following link: http://ndgmr.com/vana_dev/#/checkout/complete?cart=%{statusLink}'
+      status_link: 'To view the status of your order or to get the payment-information, please click the following link: http://ndgmr.com/vana_dev/#/checkout/complete?cart='
   spree:
     terms_and_conditions:
       title: 'Terms and Conditions'
