@@ -12,4 +12,5 @@ de:
       terms_and_conditions: 'AGB'
     order_mailer:
         confirm_email:
-          status_link: 'Um den Status Ihrer Bestellung einzusehen oder um Zahlungsinformationen zu erhalten klicken sie bitte auf folgenden Link: http://ndgmr.com/vana_dev/#/checkout/complete?cart='
+          status_link: 'Um den Status Ihrer Bestellung einzusehen oder um Zahlungsinformationen zu erhalten klicken sie bitte auf folgenden Link: http://my-vana.de/#/bestellung?id='
+          

@@ -1,22 +1,41 @@
 <% require 'base64' %>
-<%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+Liebe/r <%= @order.bill_address.firstname %>,
 
-<%= Spree.t('order_mailer.confirm_email.instructions') %>
-<%= Spree.t('order_mailer.confirm_email.status_link') %><%= Base64.encode64(@order.number + '::' + @order.token) %>
+vielen Dank für deinen Einkauf auf my-vana.de. Hiermit bestätigen wir den Eingang deiner Bestellung.
+Dies ist eine automatisch generierte E-Mail und ist keine Auftragsbestätigung.
+Die Annahme deiner Bestellung erfolgt mit einer separaten E-Mail.
 
--============================================================-
-<%= Spree.t('order_mailer.confirm_email.order_summary') %>
--============================================================-
+============================================================
+Du hast folgende Dinge bei uns bestellt:
+============================================================
 <% @order.line_items.each do |item| %>
   <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
 <% end %>
--============================================================-
-<%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %>
 
-<% @order.adjustments.eligible.each do |adjustment| %>
-  <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
-<% end %>
+============================================================
+Versandkosten: <%= @order.display_ship_total %>
+Gesamtpreis: <%= @order.display_total %>
+darin enthaltene MwSt. 19% : <%= @order.display_included_tax_total %>
 
-<%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %>
+Wenn dies nicht deinen Wünschen entspricht, nimm schnellst-möglich Kontakt mit uns auf über:
+mail@my-vana.de
+oder antworte auf diese E-Mail.
 
-<%= Spree.t('order_mailer.confirm_email.thanks') %>
+Über folgenden Link kannst du dich jederzeit über den Status deiner Bestellung informieren:
+https://my-vana.de/#/bestellung?id=<%= URI::encode(Base64.encode64(@order.number + '::' + @order.token)) %>
+
+Unsere AGBs und dein Widerrufsrecht findest du hier:
+https://my-vana.de/#agb
+https://my-vana.de/#widerrufsbelehrung
+
+
+Dein VANA-Team wünscht dir noch einen super sonnigen Tag, und bis demnächst!
+
+
+--
+OMM Ideas UG (haftungsbeschränkt)
+Trochtelfingerstr. 4, 70567 Stuttgart
+Amtsgericht - Registergericht - Stuttgart 
+HRB XXXXXXXXX, Sitz Stuttgart 
+Geschäftsführer: Malte Horstmann, Olaf Horstmann
+
