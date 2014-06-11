@@ -6,7 +6,8 @@ Dies ist eine automatisch generierte E-Mail und ist keine Auftragsbestätigung.
 Die Annahme deiner Bestellung erfolgt mit einer separaten E-Mail.
 
 ============================================================
-Du hast folgende Dinge bei uns bestellt:
+Du hast unter der Bestellnummer: <%= @order.number %>
+folgende Dinge bei uns bestellt:
 ============================================================
 <% @order.line_items.each do |item| %>
   <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
