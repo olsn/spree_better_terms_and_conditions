@@ -6,3 +6,7 @@
 <legend>Vana Payment Info</legend>
 	<p><%= @order.vana_payment_info %></p>
 </fieldset>
+<fieldset class="no-border-bottom">
+<legend>Print Invoice</legend>
+	<%= link_to("print", spree.admin_order_path(@order, :pdf , :template => 'invoice'), :class => "button icon-print") %>
+</fieldset>
