@@ -22,11 +22,11 @@ mail@my-vana.de
 oder antworte auf diese E-Mail.
 
 Über folgenden Link kannst du dich jederzeit über den Status deiner Bestellung informieren:
-https://my-vana.de/#/bestellung?id=<%= URI::encode(Base64.encode64(@order.number + '::' + @order.token)) %>
+https://my-vana.de/bestellung?id=<%= URI::encode(Base64.encode64(@order.number + '::' + @order.token)) %>
 
 Unsere AGBs und dein Widerrufsrecht findest du weiter unten:
-https://my-vana.de/#agb
-https://my-vana.de/#widerrufsbelehrung
+https://my-vana.de/agb
+https://my-vana.de/widerrufsbelehrung
 
 Dein VANA-Team wünscht dir noch einen super sonnigen Tag, und bis demnächst!
 
