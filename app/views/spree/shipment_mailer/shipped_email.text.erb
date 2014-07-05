@@ -5,7 +5,7 @@ Du hast unter der Bestellnummer: <%= @shipment.order.number %>
 folgende Dinge bei uns bestellt:
 ============================================================
 <% @shipment.manifest.each do |item| %>
-  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
+  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text)%>
 <% end %>
 
 ============================================================
