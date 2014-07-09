@@ -11,6 +11,7 @@ folgende Dinge bei uns bestellt:
 ============================================================
 
 Deine Bestellung wurde soeben versendet und sollte in 2-3 Tagen bei Dir eintreffen.
+Die Rechnung dazu findest du angehängt an diese E-Mail.
 
 Über den Status deiner Bestellung kannst du dich auch über folgenden Link informieren:
 https://my-vana.de/bestellung?id=<%= URI::encode(Base64.encode64(@shipment.order.number + '::' + @shipment.order.token)) %>
