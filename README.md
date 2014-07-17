@@ -2,7 +2,7 @@ For the Invoice-Creation:
 Copy all files from
 ..\app\views\spree\shipment_mailer
 to 
-YOU_STORE\app\views
+YOUR_STORE\app\views
 
 o/w marking a order as shipped will not work.
 
